@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+}
+ 
+/* 1. Fundo do cabeçalho em branco */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff; /* Mudado de #333 para branco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* 2. PetCare Premium na cor roxa */
+.logo {
+    font-size: 1.4rem;
+    color: #6c4df6; /* Mudado de white para o roxo do seu tema */
+    font-weight: bold;
+}
+
+/* 3. Botões do menu (Início, Serviços, Sobre) */
+nav a {
+    text-decoration: none;
+    color: #333333; /* Usei cinza escuro para dar contraste com o fundo branco */
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Efeito ao passar o mouse por cima dos botões */
+nav a:hover {
+    color: #6c4df6; /* Fica roxo ao passar o mouse, combinando com o logo */
+}
+ 
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 8%;
+    gap: 45px;
+    background: linear-gradient(135deg, white, white);
+}
+ 
+.hero.text span{
+    color: purple;
+    font-weight: bold;
+}
+ 
+.hero h1{
+    font-size: 3.2rem;
+    margin: 15px 0;
+}
+ 
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+}
+ 
+.hero img {
+    width: 48%;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px black;
+}
+ 
+.btn {
+    display: inline-block;
+    background-color: yellowgreen;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+}
+ 
+.btn:hover {
+    background-color: black;
+}
+ 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 45px 8%;
+}
+ 
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #00000014;
+    transition: 0.3s;
+}
+
+.card-hover{
+    transform: translateY(-8px);
+}
+
+.cardh3{
+    margin-bottom:12px;
+    color: #6c4df6;
+    text-align: center;
+}
+
+.card p {
+    color: #555;
+    text-align: center;
+}
+
+.sobre {
+    padding: 60px 8px;
+    background-color: #6c4df6;
+    color: #ffff;
+    text-align: center;
+}
+
+.sobre p{
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.servicos{
+    padding: 60px 8%;
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.servicos h1{
+    font-size: 2.7rem;
+    color: #6c4df6;
+}
+
+.subtitulo{
+    margin-top: 10px;
+    color: #666;
+}
+
+footer{
+    background: #1f1f2e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p{
+    margin: 5px 0;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a{
+        margin: 0 8px;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero img{
+        font-size: 2.2rem;
+    }
+}

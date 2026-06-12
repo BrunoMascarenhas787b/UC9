@@ -1,0 +1,215 @@
+/* Reseta margens e preenchimentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte puxada do Google Fonts e as cores gerais da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111111; /* Fundo bem escuro */
+    color: #ffffff;
+}
+
+/* Títulos gerais das seções */
+h2 {
+    text-align: center;
+    color: #ff3333; /* Vermelho destacado */
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    /* Deixa o menu fixo no topo ao rolar a página */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s; /* Transição suave para o efeito hover */
+}
+
+/* Troca de cor ao passar o mouse */
+nav a:hover {
+    color: #ff3333;
+}
+
+/* --- PLAYLIST DE MÚSICAS --- */
+#musicas {
+    padding: 50px 20px;
+}
+
+#musicas ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#musicas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #ff3333; /* Bordinha de detalhe */
+}
+
+/* Botão do YouTube */
+.btn-youtube {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s; /* Prepara o elemento para animar */
+}
+
+/* Crescimento e sombreamento exigidos no hover do botão */
+.btn-youtube:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
+}
+
+/* --- ÁLBUNS --- */
+#albuns {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+}
+
+.container-albuns {
+    display: flex; /* Organiza os álbuns em linha */
+    justify-content: center;
+    gap: 30px; /* Espaço entre os álbuns */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.album-card {
+    text-align: center;
+}
+
+.album-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+    border-radius: 10px;
+    transition: transform 0.4s; /* Transição para o hover */
+}
+
+/* Efeito hover de crescimento na imagem do álbum */
+.album-card img:hover {
+    transform: scale(1.08);
+}
+
+.album-card a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.album-card a:hover {
+    color: #ff3333;
+}
+
+/* --- GALERIA DE FOTOS (COM FILTROS) --- */
+#galeria {
+    padding: 50px 20px;
+}
+
+.container-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.container-galeria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Aplicação dos filtros CSS exigidos */
+.filtro-cinza { filter: grayscale(100%); }
+.filtro-sepia { filter: sepia(100%); }
+.filtro-brilho { filter: brightness(150%); }
+.filtro-normal { filter: none; }
+.filtro-livre { filter: invert(100%); } /* Filtro livre escolhido: Cores invertidas */
+
+/* --- FORMULÁRIO DE COMENTÁRIO --- */
+#comentarios {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Coloca os campos um embaixo do outro */
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+}
+
+button {
+    background-color: #ff3333;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #000000;
+    padding: 30px;
+    text-align: center;
+}
+
+.redes-sociais {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icone {
+    width: 40px;
+    transition: 0.3s;
+}
+
+/* Efeito hover no ícone do rodapé */
+.icone:hover {
+    filter: brightness(70%) sepia(100%) hue-rotate(300deg) saturate(500%); /* Troca a cor do ícone */
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!-- Define que o documento utiliza HTML5 -->
+<html lang="pt-BR"> <!-- Idioma da página: Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite caracteres especiais (ç, á, é, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar corretamente a dispositivos móveis -->
+
+    <title>Menu Lateral</title> <!-- Título exibido na aba do navegador -->
+
+    <style>
+        /* Remove margens e espaçamentos padrão dos elementos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Inclui padding e borda no cálculo do tamanho */
+        }
+
+        /* Estilo geral da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0d1117;
+            /* Fundo escuro */
+            color: #e6edf3;
+            /* Cor padrão dos textos */
+        }
+
+        /* ===================== */
+        /* MENU LATERAL */
+        /* ===================== */
+
+
+        ul{
+            list-style: none;
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            background-color: #161b22;
+            border-right: 2px solid aqua;
+            box-shadow: 0 0 20px #00e5ff4d;
+            padding: 20px;
+        }
+
+        /*Pseudo elemento antes da a lista*/
+        ul::before{
+            content: 'Menu';
+            display: block;
+            text-align: center;
+            color: #00e5ff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 3px; /*espaçamento entre as letras*/
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00e5ff;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+
+        }
+
+        /*Link Ativo*/
+
+        li a.active{
+            background: aqua;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00e5ff;
+
+        }
+
+        /*efeito hover*/
+        li a:hover:not(.active) {
+            background: #21262d;
+            color: aqua;
+            border: 1px solid aqua;
+            transform: translateX(8px);
+            box-shadow: 0 0 10px #00e5ff80;
+        }
+         /*conteudo principal*/
+
+         .content{
+            margin-left: 270px;
+            min-height: 100vh;
+            padding: 40px;
+            background: radial-gradient(circle at top right ,
+            #00e5ff1a, transparent, transparent 40%), #00e5ff1a;
+         }
+
+         .content h1{
+            color: aqua;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #00e5ff ;
+            margin-bottom: 20px;
+         }
+         
+         .content p{
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+         }
+
+         @media(max-width:768px){
+            ul{
+                width: 200px;
+            }
+            .content{
+                margin-left: 200px;
+            }
+         }
+
+    
+    
+    
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- Menu lateral -->
+    <ul>
+        <li><a class="active" href="#home">Inicio</a></li>
+        <li><a href="#news">Notícias</a></li>
+        <li><a href="#contact">Contatos</a></li>
+        <li><a href="#about">Sobre</a></li>
+    </ul>
+
+    <!-- Área principal da página -->
+    <div class="content">
+
+        <h1>Bem-vindo ao Futuro</h1>
+
+        <p>
+            Este layout utiliza um visual inspirado em dashboards tecnológicos,
+            interfaces cyberpunk e painéis de sistemas modernos.
+        </p>
+
+        <p>
+            Os efeitos neon, sombras luminosas e contrastes escuros proporcionam
+            uma aparência profissional e futurista.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

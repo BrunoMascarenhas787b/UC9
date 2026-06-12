@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Define a visualização responsiva para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Estilos gerais para o corpo do documento */
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+            margin: 0; /* Remove margens padrão */
+        }
+ 
+        .navbar {
+            overflow: hidden; /* Para evitar que o conteúdo transborde*/
+            background-color: #276627; /* Cor de fundo da barra*/
+        }
+       
+        .navbar a {
+            float: left; /*Alinha os links à esquerda*/
+            font-size: 16px; /*Tamanho da fonte dos links*/
+            color: white; /*Cor do texto*/
+            text-align: center; /*Alinha o texto no centro*/
+            padding: 14px 16px; /*Espaçamento interno dos links*/
+            text-decoration: none; /*Remove o sublinhado dos links*/
+        }
+ 
+        .subnav {
+            float: left; /*Alinha os submenus à esquerda*/
+            overflow: auto; /*Evitar transbordamento*/
+            background-color: #3d9674; /*Cor de fundo*/
+        }
+ 
+        .subnav .subnavbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: aliceblue;
+            padding: 14px 16px;
+            background-color: #65963d;
+            font-family: inherit;
+            margin: 0;
+        }
+ 
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: #8ba728;
+        }
+ 
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: #6ca03c;
+            width: 100%;
+            z-index: 1;
+        }
+ 
+        .subnav-content a {
+            float: left;
+            color: #000000;
+            text-decoration: none;
+        }
+ 
+       .subnav-content a:hover {
+        background-color: #295814;
+        color: #ffffff;
+       }
+ 
+       .subnav:hover .subnav-content {
+        display: block;
+       }
+ 
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Principal</a> <!-- Link para a seção Principal -->
+        <div class="subnav">
+            <button class="subnavbtn">Sobre <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Sobre" -->
+            <div class="subnav-content">
+                <a href="#company">Companhia</a> <!-- Link para a seção Companhia -->
+                <a href="#team">Equipe</a> <!-- Link para a seção Equipe -->
+                <a href="#careers">Carreiras</a> <!-- Link para a seção Carreiras -->
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Serviços <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Serviços" -->
+            <div class="subnav-content">
+                <a href="#bring">Trazer</a> <!-- Link para a seção Trazer -->
+                <a href="#deliver">Entregar</a> <!-- Link para a seção Entregar -->
+                <a href="#package">Pacote</a> <!-- Link para a seção Pacote -->
+                <a href="#express">Expresso</a> <!-- Link para a seção Expresso -->
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Parceiros <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Parceiros" -->
+            <div class="subnav-content">
+                <a href="#link1">Nike</a> <!-- Link para o primeiro parceiro -->
+                <a href="#link2">Adidas</a> <!-- Link para o segundo parceiro -->
+                <a href="#link3">Lacoste</a> <!-- Link para o terceiro parceiro -->
+                <a href="#link4">Vans</a> <!-- Link para o quarto parceiro -->
+            </div>
+        </div>
+        <a href="#contact">Contatos</a> <!-- Link para a seção Contatos -->
+    </div>
+    <div style="padding:0 16px">
+        <h3>Subnav/menu suspenso dentro de uma barra de navegação</h3>
+        <p>Passe o mouse sobre o link "Sobre", "Serviços" ou "Parceiros" para ver o submenu de navegação.</p>
+    </div>
+</body>
+</html>
+ 
+ 

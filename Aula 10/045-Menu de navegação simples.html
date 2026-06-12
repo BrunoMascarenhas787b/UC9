@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu de Navegação</title>
+
+
+<style>
+     /* Resetar a page */
+   *{
+     margin: 0;
+     padding: 0; 
+     box-sizing: border-box;
+   }
+
+   body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+   }
+
+   nav{
+    background-color: #8e44ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    box-shadow: 0 3px 8px #00000033;
+   }
+   /*nav é links pra abrir certas pages*/
+   nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3;
+    font-weight: bold;
+   }
+
+   nav a:hover{
+    background-color: white;
+    color: #8e44ad;
+    border-radius: 5px;
+   }
+
+   @media (max-width: 600px){
+    nav {
+        width:100%;
+        text-align: center;
+    }
+   }
+
+
+</style>
+
+</head>
+<body>
+
+<nav>
+
+    
+    <a href="#home">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+</body>
+</html>

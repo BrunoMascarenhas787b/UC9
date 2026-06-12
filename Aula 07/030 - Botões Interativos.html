@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões Interativos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .btn1{
+             padding: 12px 30px;
+             font-size: 18px;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             transition: all 0.3s ease;
+        }
+
+        /*Sombra, Zoom e troca de Cor*/
+        .btn1{
+            background-color: #3f314d;
+            color: white;
+        }
+        .btn2{
+            transform: scale(1.1);
+            background-color: #7e5f9c;
+            box-shadow: 0 8px 16px black;
+        }
+
+        .btn2:hover{
+            background-color: #3f314d;
+            color: white;
+        }
+        .btn3 {
+            background-color: #4b642b;
+            color:white;
+            position: relative;
+            padding: 10px 60px;
+            overflow: hidden;
+        }
+
+        .btn3::before {
+            content: '';
+            position: absolute;
+            top:0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff33;
+            transition: left 0.3s ease;
+        }
+
+        .btn3:hover::before {
+            left: 0;   
+        }
+
+        .btn3:hover {
+            background-color: #91a85c;
+        }
+        /*rotação com troca de cor*/
+
+        .btn4{
+            background-color: pink;
+            color: black;
+            border-radius: 50px;
+            padding: 10px 60px;
+
+        }
+
+        .btn4:hover{
+            transform: rotate(3deg) scale(1.05);
+            background-color: #ec526c;
+
+        }
+
+
+        /*Estilo para botão com imagem*/
+        .btn-with-image{
+            background-color: #98b3e9;
+            color: wheat;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+
+        }
+
+        .btn-with-image img{
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .btn-with-image:hover{
+            background-color: #385286;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <button class="btn btn1">Sombra e Zoom</button>
+    <button class="btn btn2">Inverter Cores</button>
+    <button class="btn btn3">Deslize</button>
+    <button class="btn btn4">Rotação</button>
+
+    <!-- Botão com imagem -->
+    <button class="btn-with-image">
+        <img src="030- Icone.png" alt="Ícone"> <!-- Substitua "icon.png" pelo caminho da sua imagem -->
+        Botão com Imagem
+    </button>
+
+</body>
+
+</html>

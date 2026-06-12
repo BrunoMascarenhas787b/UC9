@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobreposições de Imagem</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            width: 20%;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: #4597da8c;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+
+        .text {
+            white-space: nowrap;
+            /*Impede que o conteúdo de um elemento
+            se quebre em várias linhas, forçando-o a permanecer em uma única linha*/
+            color: white;
+            font-size: 16px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .overlay-left {
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .overlay-right {
+            width: 0;
+            height: 100%;
+            right: 0;
+            top: 0;
+        }
+
+        .overlay-top {
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+        }
+        
+         .overlay-bottom {
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .container:hover .overlay-left, 
+        .container:hover .overlay-right {
+            width: 100%;
+        }
+
+        .container:hover .overlay-top,
+        .container:hover .overlay-bottom {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Sobreposições de Imagem</h2>
+
+    <div class="container">
+        <img src="adidas.jpg" alt="descrição" class="image">
+        <div class="overlay overlay-left">
+            <div class="text">Sobreposição Esquerda</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="adidas.jpg" alt="descrição" class="image">
+        <div class="overlay overlay-right">
+            <div class="text">Sobreposição Direita</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="adidas.jpg" alt="descrição" class="image">
+        <div class="overlay overlay-top">
+            <div class="text">Sobreposição Superior</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="adidas.jpg" alt="descrição" class="image">
+        <div class="overlay overlay-bottom">
+            <div class="text">Sobreposição Inferior</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral Oculto</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: margin-left 0.5s; /* Suaviza a transição do conteúdo */
+        }
+        
+        .sidebar{
+            height: 100%;
+            width: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #b67983;
+            overflow: hidden; /*Esconde o conteúdo horizontal*/
+            transition: 0.5s; /*Suavizar a transição ao abrir e fechar*/
+        }
+
+        .sidebar a {
+            padding: 15px 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+            opacity: 0; /*Opacidade inicialmente invisível*/
+            visibility: hidden; /*Oculta os links*/
+        }
+
+        .sidebar:hover{
+           width: 200px; 
+        }
+
+        .sidebar:hover a{
+           opacity: 1; /*Torna os links visíveis*/
+           visibility: visible; /*Exibe os links*/
+
+        }
+
+        .sidebar a:hover{
+            background-color: bisque;
+        }
+
+        /*Conteúdo principal*/
+        .main{
+            margin-left: 50px;
+            padding: 20px;
+            transition: margin-left 0.5s;
+        }
+
+        .sidebar:hover ~ .main{
+            margin-left: 200px;
+
+        }
+</style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        <a href="#">Blog</a>
+    </div>
+
+    <div class="main">
+        <h1>Página Principal</h1>
+        <p>Conteúdo aqui...</p>
+        <p>Mais conteúdo...</p>
+        <p>Experimente passar o mouse no menu lateral.</p>
+    </div>
+
+</body>
+</html>

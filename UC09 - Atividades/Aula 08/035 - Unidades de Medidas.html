@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidades de Medida no CSS</title>
+
+<style>
+    /*
+    =====================================================
+    UNIDADES ABSOLUTAS
+    =====================================================
+
+    px (Pixel)
+    - Unidade mais utilizada.
+    - Mantém tamanho fixo.
+    - Ideal para bordas, ícones e elementos que não devem variar.
+
+    cm, mm, in, pt, pc
+    - Pouco usadas para telas.
+    - Mais comuns em impressão.
+    */
+
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    header{
+        background-color: #1e88e5;
+
+        /* px: altura fixa */
+        padding: 20px;
+
+        color: white;
+        text-align: center;
+    }
+
+    .container{
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .card{
+        background: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+
+        /* px é ideal para sombras */
+        box-shadow: 0px 2px 8px #00000026;
+    }
+
+    /*
+    =====================================================
+    EM
+    =====================================================
+
+    em = relativo ao tamanho da fonte do elemento pai.
+
+    Exemplo:
+    Pai = 20px
+    Filho = 2em
+
+    Resultado:
+    Filho = 40px
+
+    Quando usar:
+    - Componentes que precisam crescer de forma proporcional.
+    */
+
+    .exemplo-em{
+        font-size: 20px;
+    }
+
+    .exemplo-em p{
+        font-size: 1.5em;
+    }
+
+    /*
+    =====================================================
+    REM
+    =====================================================
+
+    rem = relativo ao font-size do elemento root (html).
+
+    Exemplo:
+    html = 16px
+    2rem = 32px
+
+    Quando usar:
+    - Projetos responsivos.
+    - Tamanhos de texto.
+    - Espaçamentos globais.
+    */
+
+    html{
+        font-size: 16px;
+    }
+
+    .exemplo-rem{
+        font-size: 2rem;
+    }
+
+    /*
+    =====================================================
+    %
+    =====================================================
+
+    Porcentagem depende do tamanho do elemento pai.
+
+    Quando usar:
+    - Layouts fluidos.
+    - Larguras responsivas.
+    */
+
+    .caixa-pai{
+        background: #ddd;
+        padding: 10px;
+    }
+
+    .caixa-filho{
+        width: 50%;
+        background: #4caf50;
+        color: white;
+        padding: 10px;
+    }
+
+    /*
+    =====================================================
+    VW
+    =====================================================
+
+    vw = viewport width
+
+    100vw = largura total da tela.
+
+    Quando usar:
+    - Títulos grandes.
+    - Banners.
+    - Elementos adaptáveis à largura da tela.
+    */
+
+    .titulo-vw{
+        font-size: 5vw;
+        text-align: center;
+        color: #1565c0;
+    }
+
+    /*
+    =====================================================
+    VH
+    =====================================================
+
+    vh = viewport height
+
+    100vh = altura total da tela.
+
+    Quando usar:
+    - Hero sections.
+    - Landing pages.
+    */
+
+    .secao-vh{
+        height: 30vh;
+        background: #90caf9;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*
+    =====================================================
+    VMIN
+    =====================================================
+
+    Usa o menor valor entre largura e altura da tela.
+
+    Quando usar:
+    - Elementos quadrados responsivos.
+    */
+
+    .quadrado-vmin{
+        width: 20vmin;
+        height: 20vmin;
+        background: orange;
+        margin: auto;
+    }
+
+    /*
+    =====================================================
+    VMAX
+    =====================================================
+
+    Usa o maior valor entre largura e altura da tela.
+
+    Quando usar:
+    - Elementos que precisam crescer bastante.
+    */
+
+    .texto-vmax{
+        font-size: 3vmax;
+        text-align: center;
+    }
+
+    /*
+    =====================================================
+    CH
+    =====================================================
+
+    ch = largura aproximada do caractere "0".
+
+    Quando usar:
+    - Campos de formulário.
+    - Limitar quantidade de caracteres visíveis.
+    */
+
+    .input-ch{
+        width: 30ch;
+        padding: 10px;
+    }
+
+    /*
+    =====================================================
+    EX
+    =====================================================
+
+    ex = altura aproximada da letra x minúscula.
+
+    Pouco utilizada atualmente.
+
+    Pode ser útil em ajustes tipográficos finos.
+    */
+
+    .texto-ex{
+        margin-top: 3ex;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Guia de Unidades de Medida CSS</h1>
+    <p>Os comentários no código explicam quando usar cada unidade.</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>PX (Pixel)</h2>
+        <p>Ideal para tamanhos fixos como bordas, ícones e sombras.</p>
+    </div>
+
+    <div class="card exemplo-em">
+        <h2>EM</h2>
+        <p>Esta fonte utiliza 1.5em e depende do tamanho do elemento pai.</p>
+    </div>
+
+    <div class="card">
+        <h2 class="exemplo-rem">REM</h2>
+        <p>Baseado no tamanho da fonte definido no elemento html.</p>
+    </div>
+
+    <div class="card">
+        <h2>Porcentagem (%)</h2>
+
+        <div class="caixa-pai">
+            Caixa Pai (100%)
+
+            <div class="caixa-filho">
+                Caixa Filho (50%)
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>VW</h2>
+        <p class="titulo-vw">Texto usando 5vw</p>
+    </div>
+
+    <div class="card">
+        <h2>VH</h2>
+
+        <div class="secao-vh">
+            Altura definida em 30vh
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>VMIN</h2>
+
+        <div class="quadrado-vmin"></div>
+    </div>
+
+    <div class="card">
+        <h2>VMAX</h2>
+
+        <p class="texto-vmax">
+            Texto usando vmax
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>CH</h2>
+
+        <input
+            type="text"
+            class="input-ch"
+            placeholder="Campo com largura de 30ch">
+    </div>
+
+    <div class="card">
+        <h2>EX</h2>
+
+        <p class="texto-ex">
+            Este texto possui margem usando a unidade ex.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

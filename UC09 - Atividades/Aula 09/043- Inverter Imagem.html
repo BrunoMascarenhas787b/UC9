@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter Imagem ao Passar o Mouse</title>
+
+    <style>
+        /* Estilo do body para centralizar o conteúdo */
+        body {
+            display: flex; 
+            /* Flex container */
+            flex-direction: column;
+            /* Elementos em coluna (um abaixo do outro) */
+            justify-content: center;
+            /* Centraliza verticalmente (quando altura permite) */
+            align-items: center;
+            /* Centraliza horizontalmente */
+            min-height: 100vh; 
+            /* Altura mínima da tela inteira */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        img{
+            height: auto;
+            width: 400px;
+            transform: 0.4s;
+        }
+ 
+        img:hover{
+            transform: scaleX(1%);
+        }
+
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Texto explicativo acima da imagem -->
+    <p>Passe o mouse sobre a imagem.</p>
+
+    <!-- Imagem exibida (será invertida ao passar o mouse) -->
+    <img src="Mickey 4.jpg" alt="Descrição">
+
+</body>
+
+</html>
+
+

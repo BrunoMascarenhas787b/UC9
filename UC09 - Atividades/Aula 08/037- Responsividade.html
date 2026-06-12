@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Responsividade CSS</title>
+
+<style>
+
+/* =====================================================
+   RESET BÁSICO
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    line-height:1.6;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:2rem;
+}
+
+/* =====================================================
+   CONTAINER RESPONSIVO
+===================================================== */
+
+/*
+    max-width:
+    Impede que o conteúdo fique muito largo em telas grandes.
+
+    margin: auto:
+    Centraliza o conteúdo.
+
+    width: 90%
+    Faz o container ocupar 90% da tela em dispositivos menores.
+*/
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px 0;
+}
+
+/* =====================================================
+   GRID RESPONSIVO
+===================================================== */
+
+/*
+    display:grid
+    Organiza os elementos em colunas.
+
+    repeat(auto-fit, minmax(250px, 1fr))
+
+    auto-fit:
+    Ajusta automaticamente a quantidade de colunas.
+
+    minmax(250px, 1fr):
+    Cada card terá no mínimo 250px.
+    Se houver espaço disponível, cresce automaticamente.
+*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+/* =====================================================
+   IMAGEM RESPONSIVA
+===================================================== */
+
+/*
+    max-width:100%
+    Faz a imagem nunca ultrapassar o tamanho do container.
+
+    height:auto
+    Mantém a proporção original.
+*/
+
+.imagem-responsiva{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+}
+
+/* =====================================================
+   MENU FLEXBOX
+===================================================== */
+
+/*
+    Flexbox é muito utilizado para layouts responsivos.
+
+    display:flex
+    Coloca os itens lado a lado.
+
+    flex-wrap:wrap
+    Permite quebra de linha quando faltar espaço.
+*/
+
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+.menu a{
+    text-decoration:none;
+    background:#1976d2;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+}
+
+/* =====================================================
+   UNIDADES RESPONSIVAS
+===================================================== */
+
+/*
+    clamp()
+
+    Define:
+    mínimo,
+    ideal,
+    máximo
+
+    Muito utilizada para textos responsivos.
+*/
+
+.titulo-responsivo{
+    font-size:clamp(1.8rem, 4vw, 3rem);
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+
+/* =====================================================
+   MEDIA QUERY TABLET
+===================================================== */
+
+/*
+    Quando a largura da tela for menor ou igual a 768px
+    estas regras serão aplicadas.
+
+    Uso comum:
+    Tablets.
+*/
+
+@media (max-width: 768px) {
+
+    body{
+        background-color: aqua;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+}
+
+/* =====================================================
+   MEDIA QUERY CELULAR
+===================================================== */
+
+/*
+    Quando a tela for menor que 480px.
+
+    Uso comum:
+    Smartphones.
+*/
+
+@media (max-width:480px){
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu a{
+        text-align: center;
+    }
+}
+
+
+
+
+/* =====================================================
+   ORIENTAÇÃO DA TELA
+===================================================== */
+
+/*
+    landscape = horizontal
+
+    Pode ser usado para tablets
+    ou celulares deitados.
+*/
+@media (orientation:landscape){
+    .landscape {
+        background-color: pink;
+        padding: 15px;
+        border-left: 5px dolid green;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Responsividade em HTML e CSS</h1>
+    <p>Os comentários no código explicam cada técnica.</p>
+</header>
+
+<div class="container">
+
+    <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <h2 class="titulo-responsivo">
+        Título Responsivo usando clamp()
+    </h2>
+
+    <div class="card">
+        <h3>Imagem Responsiva</h3>
+
+        <img
+            src="https://picsum.photos/800/400"
+            alt="Imagem exemplo"
+            class="imagem-responsiva">
+
+        <p>
+            A imagem se adapta automaticamente ao tamanho da tela.
+        </p>
+    </div>
+
+    <br>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Flexbox</h3>
+            <p>
+                Organiza elementos horizontalmente e se adapta facilmente em dispositivos menores.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Grid Responsivo</h3>
+            <p>
+                Utiliza auto-fit e minmax para criar colunas automáticas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Media Queries</h3>
+            <p>
+                Permitem alterar estilos conforme o tamanho da tela.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Unidades Flexíveis</h3>
+            <p>
+                Utilização de %, rem, vw, vh e clamp().
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="landscape">
+        Este bloco muda de aparência quando o dispositivo está na orientação horizontal (landscape).
+    </div>
+
+</div>
+
+</body>
+</html>

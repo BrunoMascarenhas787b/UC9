@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>Propriedade border-radius</title> <!-- Título da página -->
+    <style>
+        .caixa {
+            background-color: #638d25;
+            color: aliceblue;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            /*centralização horizontal*/
+            align-items: center;
+            /*centralização vertical*/
+            text-align: center;
+            margin: 10px 0;
+        }
+        #rcorners1{
+            border-radius: 15px 50px 30px 5px;
+        }
+        #rcorners2{
+            border-radius: 15px 50px 30px 5px;
+        }
+         #rcorners3{
+            border-radius: 15px 50px 30px;
+            width: 150px;
+            height: 150px;
+         }
+         #rcorners4{
+            border-radius: 15px;
+         }
+         #rcorners5{
+            border-radius: 50px / 15px;
+         }
+         #rcorners6{
+            border-radius: 15px;
+         }
+         #rcorners7{
+            border-radius: 50%;
+         }
+        
+    </style>
+</head>
+<body>
+ 
+    <h1>Propriedade Border-Radius</h1>
+ 
+    <p>Quatro valores - border-radius: 15px 50px 30px 5px:</p>
+    <div id="rcorners1" class="caixa">Caixa 1</div>
+   
+    <p>Três valores - border-radius: 15px 50px 30px:</p>
+    <div id="rcorners2" class="caixa">Caixa 2</div>
+   
+    <p>Dois valores - border-radius: 15px 50px:</p>
+    <div id="rcorners3" class="caixa">Caixa 3</div>
+   
+    <p>Um valor - border-radius: 15px:</p>
+    <div id="rcorners4" class="caixa">Caixa 4</div>
+   
+    <p>Borda elíptica - border-radius: 50px / 15px:</p>
+    <div id="rcorners5" class="caixa">Caixa 5</div>
+   
+    <p>Borda elíptica - border-radius: 15px / 50px:</p>
+    <div id="rcorners6" class="caixa">Caixa 6</div>
+   
+    <p>Borda em elipse - border-radius: 50%:</p>
+    <div id="rcorners7" class="caixa">Caixa 7</div>
+   
+ 
+</body>
+</html>

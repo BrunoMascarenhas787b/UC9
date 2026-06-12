@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos de Animação</title>
+    <style>
+        /* Aplica espaçamento vertical entre os elementos */
+        body {
+            background-color: #4b6d38;
+            /* Fundo roxo escuro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        body>* {
+            margin: 20px 0;
+        }
+
+        /* ---------- EFEITO PISCAR ---------- */
+
+        @keyframes blink {
+            0%,
+            50% {
+                   opacity: 1
+            }
+
+            100% {
+                opacity: 0;
+            }
+    
+        }
+        .blink {
+
+            font-size: 24px;
+            color: blue;
+            animation: blink 1s infinite;
+            }
+
+
+        /* ---------- EFEITO PULAR ---------- */
+
+        @keyframes bounce{
+            0%,
+            100%{
+                transform: translateY(0);
+            }
+
+            50%{
+                transform: translateY(-50px);
+            }
+        }
+           .bounce{
+            display: inline-block;
+            background-color: rgb(255, 208, 0);
+            color: red;
+            padding: 20px 40px;
+            border-radius: 5px;
+            animation: bounce 1s infinite;
+           }
+        
+           /* ---------- EFEITO EXPANDIR ---------- */
+
+           @keyframes expand{
+            0%,
+            200%{
+                 transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+
+           }
+           .expand{
+                  display: inline-block;
+                  background-color: aqua;
+                  border-radius: 5px;
+                  padding: 20px 40px;
+                  animation: expand 0.5s ease-in-out infinite;
+           }
+           
+        /* ---------- EFEITO FADE IN ---------- */
+        
+        @keyframes fadeIn{
+            from { 
+                 opacity: 0;
+            }
+            
+            to {
+                opacity: 1;
+            }
+       
+        }
+
+
+        .fade-in{
+            color:blue;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* ---------- EFEITO FLIP ---------- */
+        @keyframes flip{
+            
+            from{
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(180deg);
+            }
+        }
+
+        .flip {
+            background-color: aqua;
+            padding: 20px 40px;
+            border-radius: 5px;
+            animation: flip 2s ease-in-out infinite;
+        }
+
+        /* ---------- EFEITO PULSE ---------- */
+
+
+        @keyframes pulse{
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform:scale(1.1);
+            }
+        }
+        .pulse{
+            background-color : aqua;
+            padding: 20px 40px;
+            border-radius: 5px;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+
+        }
+
+        /* ---------- EFEITO RIPPLE ---------- */
+    .ripple{
+        position: relative;
+        display: inline-block;
+        background-color: aqua;
+        overflow:hidden;
+        padding: 20px 40px;
+    }
+
+    .ripple:after {
+        content: '';
+        position: absolute;
+        top: 50% ;
+        left: 10px;
+        height : 10px;
+        width: 10px;
+        background-color: aquamarine;
+        transform: translate(-50%, -50%) scale(1);
+        animation: ripple 1s ease-in-out infinite;
+        border-radius: 50%;
+    }
+
+    @keyframes ripple {
+        0%{
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1; 
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(20);
+            opacity: 0; 
+        }
+    }
+
+        /* ---------- EFEITO ROTATE ---------- */
+         @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+         }
+
+         .rotate{
+            display: inline-block;
+            background-color: aqua;
+            border-radius: 50%;
+            padding: 20px 40px;
+            animation: rotate 3.5s linear infinite;
+
+         }
+
+        /* ---------- EFEITO SHAKE ---------- */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            
+            25% {
+                transform: translateX(-10px);
+            }
+            
+            50% {
+                transform: translateX(0);
+            }
+            75%{
+                transform: translateX(-5px);
+            }
+        }
+
+        .shake{
+            background-color: aqua;
+            padding: 20px 40px;
+            border-radius: 5px;
+            animation: shake 0.5s ease-in-out infinite;
+        }
+
+        /* ---------- EFEITO SLIDE IN ---------- */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%)
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in {
+            background-color: aqua;
+            padding: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+
+        /* ---------- EFEITO SPIN ---------- */
+       @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} /* <- Fechamento correto do keyframes */
+
+    .spin {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 5px solid #eee;
+        border-top: 20px solid aqua; /* Você pode trocar por um tom mais institucional, se preferir */
+        border-radius: 50%; /* Corrigido de 50px para 50% */
+        animation: spin 1s linear infinite;
+}
+
+        /* ---------- EFEITO TEXTO ONDA ---------- */
+        
+        
+        
+        .wave {
+            display: inline-block;
+            font-size: 24px;
+        }
+        
+        .wave span{
+            display: inline-block;
+            animation: wave 1.5s infinite;
+        }
+         wave span:nth-child(1) {
+            animation-delay: 0s;
+         }
+        .wave span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        wave span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        wave span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        wave span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes wave {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+
+                transform: translateY(-20%);
+            }
+        }
+
+        
+
+        /* ---------- EFEITO ZOOM IN ---------- */
+
+        @keyframes zoomIn {
+            from {
+                transform: scale (0.5s);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        zoom-in {
+            background-color: aqua;
+            padding: 20px 40px;
+            animation: zoomIn 1s ease-in ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blink">Estou piscando!</div>
+    <div class="bounce">Estou pulando!</div>
+    <div class="expand">Expandindo!</div>
+    <h1 class="fade-in">Bem-vindo ao Meu Site!</h1>
+    <div class="flip">Estou virando!</div>
+    <div class="pulse">Clique Aqui</div>
+    <div class="ripple">Clique Aqui</div>
+    <div class="rotate">Girando!</div>
+    <div class="shake">Estou tremendo!</div>
+    <div class="slide-in">Eu deslizei para dentro!</div>
+    <div class="spin"></div>
+    <div class="wave">
+        <span>O</span>
+        <span>l</span>
+        <span>á</span>
+        <span>!</span>
+    </div>
+    <div class="zoom-in">Zoomando para dentro!</div>
+</body>
+
+</html>

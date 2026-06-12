@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+    <style>
+        /* Reset básico de margens e box-sizing para controle de layout */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilização geral do corpo da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf6f0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Estilo do título principal */
+        h2 {
+            margin-bottom: 30px;
+            color: #fcd940;
+            font-size: 2.2rem;
+            text-shadow: 1px 1px #000; /* Dá destaque com sombra preta */
+        }
+         
+         .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             /* Cria colunas responsivas que se ajustam ao tamanho da tela */
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            /* Centraliza a galeria e limita a largura máxima para melhor visualização em telas grandes */
+        }
+ 
+        .gallery {
+            background: wheat;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid #000;
+            transition: transform 0.3 ease;
+            /* Estilo para cada bloco da galeria, com borda e transição para efeitos visuais */
+           
+        }
+ 
+        .gallery:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 28px black;
+            /* Efeito de zoom e sombra ao passar o mouse */
+        }
+ 
+        .gallery img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            /* Garante que a imagem preencha o espaço sem distorcer */
+        }
+ 
+        .desc {
+            padding: 15px;
+            text-align: center;
+            background-color: #fcd940;
+            color: #000;
+            font-weight: bold;
+             /* Destaca a descrição com negrito */
+        }
+ 
+        a {
+            text-decoration: none;
+            color: inherit;    
+            /* Remove sublinhado e mantém a cor do texto */
+        }
+ 
+        @media (max-width: 480px) {
+           h2 {
+                font-size: 1.6rem;
+            }
+ 
+            .desc {
+                font-size: 0.8rem;
+           }
+                /* Ajustes para telas menores, como smartphones */
+            }
+ 
+    </style>
+</head>
+
+<body>
+
+    <!-- Título visível na página -->
+    <h2>Galeria do Mickey Mouse</h2>
+
+    <!-- Container de todas as imagens da galeria -->
+    <div class="gallery-container">
+
+        <!-- Bloco individual da galeria -->
+        <div class="gallery">
+            <a target="_blank" href="Mickey 1.jpg">
+                <img src="Mickey 1.jpg" alt="descrição">
+            </a>
+            <div class="desc">Mickey dando boas vindas!</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="Mickey 2.jpg">
+                <img src="Mickey 2.jpg" alt="descrição">
+            </a>
+            <div class="desc">Diversão garantida com o Mickey!</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="Mickey 3.jpg">
+                <img src="Mickey 3.jpg" alt="descrição">
+            </a>
+            <div class="desc">O clássico nunca sai de moda!</div>
+        </div>
+    </div>
+</body>
+</html>

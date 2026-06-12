@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoSafe | Capacetes Premium</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4500; /* Laranja esportivo */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff4500;
+        }
+
+        /* Banner Principal (Hero Section) */
+        .banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .btn-principal {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-principal:hover {
+            background-color: #cc3700;
+        }
+
+        /* Seção de Produtos */
+        .vitrine {
+            padding: 50px 5%;
+            text-align: center;
+        }
+
+        .vitrine h2 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #1a1a1a;
+        }
+
+        .produtos-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Cartões de Produto */
+        .cartao-produto {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .cartao-produto:hover {
+            transform: translateY(-10px);
+        }
+
+        .cartao-produto img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .info-produto {
+            padding: 20px;
+        }
+
+        .info-produto h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            color: #ff4500;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-comprar {
+            display: block;
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #ff4500;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">MotoSafe</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Capacetes</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Contato</a>
+            <a href="#">🛒 Carrinho (0)</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <h1>Sua Segurança em Primeiro Lugar</h1>
+        <p>Encontre os melhores capacetes com tecnologia de ponta e design exclusivo.</p>
+        <a href="#" class="btn-principal">Ver Lançamentos</a>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <section class="vitrine">
+        <h2>Destaques da Semana</h2>
+        
+        <div class="produtos-grid">
+            
+            <!-- Produto 1 -->
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1588628566587-bf50ef6e559a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Capacete Esportivo">
+                <div class="info-produto">
+                    <h3>Capacete Speed Demon</h3>
+                    <p class="preco">R$ 899,00</p>
+                    <a href="#" class="btn-comprar">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Capacete Vintage">
+                <div class="info-produto">
+                    <h3>Capacete Classic Vintage</h3>
+                    <p class="preco">R$ 649,00</p>
+                    <a href="#" class="btn-comprar">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1568819317551-31051b37f69f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Capacete Urbano">
+                <div class="info-produto">
+                    <h3>Capacete Urban City</h3>
+                    <p class="preco">R$ 450,00</p>
+                    <a href="#" class="btn-comprar">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 MotoSafe Capacetes. Todos os direitos reservados.</p>
+        <p>Site demonstrativo - Apenas para visualização HTML/CSS.</p>
+    </footer>
+
+</body>
+</html>

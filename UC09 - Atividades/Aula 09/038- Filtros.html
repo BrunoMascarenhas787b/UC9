@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtros com Imagem do Mickey</title>
+
+  <style>
+    /* Cor de fundo da página */
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Título da seção */
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Layout em grade para exibir as imagens lado a lado */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      /* Responsivo */
+      gap: 100px;
+      justify-items: center;
+    }
+
+    /* Estilo base para todas as imagens */
+    .grid img {
+      width: 235px;
+      /* Largura padrão */
+      height: 235px;
+      /* Altura padrão */
+      object-fit: cover;
+      /* Preenche o espaço sem distorcer */
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+    }
+     .blur {filter: blur(2px);}
+     .brightness {filter:brightness(250%);}
+     .contrast {filter: contrast(70%);}
+     .grayscale { filter: grayscale(200%);}
+     .huerotate {filter: hue-rotate(200deg);}
+     .invert {filter: invert(100%);}
+     .opacity {filter: opacity(50%);}
+     .saturate {filter: saturate(7);}
+     .sepia { filter: sepia(100%);}
+     .shadow { filter: drop-shadow(8px 8px 10px #daa45d);}
+     
+
+  </style>
+</head>
+
+<body>
+
+  <h2>Filtros aplicados à imagem do New Balance</h2>
+
+  <!-- Grade com imagens usando diferentes filtros -->
+  <div class="grid">
+    <img src="newbalance.webp" alt="original"> <!-- Imagem original -->
+    <img class="blur" src="newbalance.webp" alt="desfoque">
+    <img class="brightness" src="newbalance.webp" alt="brilho">
+    <img class="contrast" src="newbalance.webp" alt="contraste">
+    <img class="grayscale" src="newbalance.webp" alt="escala de cinza">
+    <img class="huerotate" src="newbalance.webp" alt="matiz alterada">
+    <img class="invert" src="newbalance.webp" alt="cores invertidas">
+    <img class="opacity" src="newbalance.webp" alt="opacidade reduzida">
+    <img class="saturate" src="newbalance.webp" alt="saturação alta">
+    <img class="sepia" src="newbalance.webp" alt="filtro sépia">
+    <img class="shadow" src="newbalance.webp" alt="sombra">
+  </div>
+
+</body>
+
+</html>

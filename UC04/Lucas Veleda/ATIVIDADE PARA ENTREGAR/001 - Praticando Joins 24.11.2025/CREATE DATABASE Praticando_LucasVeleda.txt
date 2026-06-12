@@ -1,0 +1,42 @@
+CREATE DATABASE Praticando;
+
+USE Praticando;
+
+-- Tabela Clientes
+CREATE TABLE Clientes (
+	IdCliente INT PRIMARY KEY, 
+	Nome VARCHAR(50)
+);
+
+-- Tabela Pedidos
+CREATE TABLE Pedidos (
+	IdPedido INT PRIMARY KEY,
+	IdCliente INT,
+	Produto VARCHAR(50)
+);
+
+-- Clientes
+INSERT INTO Clientes VALUES (1, 'Ana');
+INSERT INTO Clientes VALUES (2, 'Bruno');
+INSERT INTO Clientes VALUES (3, 'Carla');
+
+-- Pedidos
+INSERT INTO Pedidos VALUES (101, 1, 'Notbook');
+INSERT INTO Pedidos VALUES (102, 1, 'Mouse');
+INSERT INTO Pedidos VALUES (103, 3, 'Teclado'); 
+
+SELECT L.IdCliente, L.Nome, M.IdPedido, M.Produto
+FROM Clientes L
+INNER JOIN Pedidos M ON L.IdCliente = M.IdCliente;
+
+SELECT L.IdCliente, L.Nome, M.IdPedido, M.Produto
+FROM Clientes L
+LEFT JOIN Pedidos M ON L.IdCliente = M.IdCliente;
+
+SELECT L.IdCliente, L.Nome, M.IdPedido, M.Produto
+FROM Clientes L
+RIGHT JOIN Pedidos M ON L.IdCliente = M.IdCliente;
+
+SELECT *
+FROM Clientes L
+FULL JOIN Pedidos M ON L.IdCliente = M.IdCliente;

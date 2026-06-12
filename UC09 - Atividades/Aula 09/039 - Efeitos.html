@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efeitos Visuais com CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+      display: flex;
+      /* Flex container */
+      flex-direction: column;
+      /* Elementos em coluna (um abaixo do outro) */
+      justify-content: center;
+      /* Centraliza verticalmente (quando altura permite) */
+      align-items: center;
+      /* Centraliza horizontalmente */
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    /*Zoom ao passar o mouse*/
+
+     .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    img {
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .zoom:hover {
+      transform: scale(1.1);
+      transition: transform 0.3 ease;
+    }
+    /*Giro ao passar o mouse*/
+
+
+    /*Preto e branco que volta à cor*/
+    .rotate:hover{
+      transform: rotate(360deg);
+      transition: transform 0.6s ease;
+    }
+
+    .color-hover{
+      filter: grayscale(100%);
+      transition: filter 0.3sec ease;
+    }
+    .color-hover:hover{
+      filter: grayscale(0%);
+    }
+     /*Imagem em formato circular*/
+     .circle {
+      border-radius: 50%;
+     }
+
+
+    /*Flip Card*/
+        .flip-card {
+      background-color: transparent;
+      width: 250px;
+      height: 300px;
+      perspective: 1000px;
+    }
+ 
+    .flip-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+ 
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+ 
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+    }
+ 
+    .flip-card-front {
+      width: 100%
+      height: 100%
+      object-fit: cover;
+    }
+ 
+    .flip-card-back {
+      background-color: #1565c0;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+ 
+
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Exemplos de Efeitos com CSS</h1>
+
+  <h2>1. Zoom ao passar o mouse</h2>
+  <div class="container">
+    <img class="zoom" src="Mickey 1.jpg" alt="Zoom">
+  </div>
+
+  <h2>2. Giro ao passar o mouse</h2>
+  <div class="container">
+    <img class="rotate" src="Mickey 1.jpg" alt="Rotate">
+  </div>
+
+
+
+  <h2>3. Preto e branco que volta à cor</h2>
+  <div class="container">
+    <img class="color-hover" src="Mickey 1.jpg" alt="Color Hover">
+  </div>
+
+  <h2>4. Imagem circular (Avatar Style)</h2>
+  <div class="container">
+    <img class="circle" src="Mickey 1.jpg" alt="Circular">
+  </div>
+
+  <h2>5. Flip Card</h2>
+  <div class="container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="Mickey 1.jpg" alt="Frente do Card">
+        </div>
+        <div class="flip-card-back">
+          <p>Vamos para a Disney em 2025?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

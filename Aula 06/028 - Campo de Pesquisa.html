@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão de Pesquisa com Imagem</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+     body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: antiquewhite;
+     }
+    
+     .search-container1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      flex-wrap: wrap;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px #a39696;
+      padding: 5px;
+     }
+
+     .search-input1{
+      padding: 10px 15px;
+      width: 250px;
+      border: 2px solid #e7cebade;
+      border-radius: 25px 0 0 25px;
+      outline:none;
+      font-size: 16px;
+      transition: border-color 0.3s ease; 
+     }
+     .search-input1:focus{
+      border-color: orange;
+     }
+
+     .search-button1 {
+      padding: 0 20px;
+      background-color: #d8c5ab;
+      border: 2px solid #d8c5ab;
+      border-radius: 0 25px 25 px 0;
+      cursor: pointer;
+      transition: background-color 0.3s , transform 0.2s;
+      align-items: center;
+      justify-content: center;
+      height: 42px;
+     }
+
+     .search-button1:hover{
+      background-color: #c5b091;
+     }
+
+     .search-button1:active{
+      transform: scale(0.95);
+     }
+     .search-button1 img{
+      width: 25px;
+      height: 25px;
+     }
+
+
+    
+
+</style>
+</head>
+<body>
+
+  <!-- Área de busca com botão usando imagem -->
+  <div class="search-container1">
+    <input
+      type="text"
+      placeholder="Buscar..."
+      class="search-input1"
+      aria-label="Campo de pesquisa"
+    >
+
+    <!-- Botão com imagem de lupa em PNG -->
+    <button
+      class="search-button1"
+      aria-label="Clique para pesquisar"
+      title="Pesquisar"
+    >
+      <!-- Substitua o caminho abaixo pela sua imagem -->
+      <img src="028 - Lupa.png" alt="Pesquisar">
+    </button>
+  </div>
+
+</body>
+</html>
+

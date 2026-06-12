@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desaparecer em uma caixa</title>
+  <style>
+    :root {
+      --highlight-bg: rgba(134, 50, 190, 0.8);
+      --text-color: #fff;
+      --transition-speed: 0.5s;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      position: relative;
+      max-width: 400px;
+      margin: 0  auto;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity var(--transition-speed) ease;
+      backface-visibility: hidden; /*Esta propriedade é útil 
+      quando um elemento é rotacionado. Ela permite escolher se o 
+      usuário deve ou não ver a face psoterior.*/
+    }
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity var(--transition-speed) ease;
+    }
+
+    .text {
+      background-color: var(--highlight-bg);
+      color: var(--text-color);
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+
+    .container:hover .image {
+      opacity: 0.3;
+      filter: blur(1px);
+    }
+
+    .container:hover .middle {
+      opacity: 1;
+    }
+
+    /*var() é uma função que permite utilizar variáveis no CSS para facilitar 
+    na hora de desenvolvimento de um código ou projeto*/
+
+</style>
+</head>
+<body>
+
+  <h2>Desaparecer em uma caixa</h2>
+
+  <div class="container">
+    <img src="Mickey 2.jpg" alt="Descrição da Imagem" class="image">
+    <div class="middle">
+      <div class="text">Mickey</div>
+    </div>
+  </div>
+
+</body>
+</html>

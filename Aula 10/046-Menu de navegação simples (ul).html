@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu de Navegação Moderno</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #8b30e0, #e6d5f7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra de navegação */
+
+nav{
+    background-color: #fff;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+li a{
+    color: #8a4fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 18px;
+    position: relative;
+    transition: 0.3;
+}
+
+li a ::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #8a4fff;
+    transform: translateX(-50%)
+}
+
+li a:hover{
+    background: aqua;
+}
+
+li a:hover::after{
+    width: 70%;
+}
+
+/*Link Ativo*/
+.active{
+    background-color: #8a4fff;
+    color: white;
+}
+
+;active::after{
+    display:none
+}
+
+@media(max-width600px){
+    ul{
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+li{
+    width: 100%;
+}
+
+li a{
+    display: block;
+    text-align: center;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#news">Notícias</a></li>
+        <li><a href="#contact">Contatos</a></li>
+        <li><a href="#about">Sobre</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

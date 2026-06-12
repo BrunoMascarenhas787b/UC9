@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Moderno</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#000;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff14;
+    border-bottom: 1px solid #ffffff1a;
+    backdrop-filter: blur (15px);
+    /*Aplica um desfoque ao conteudo atras do elemento*/
+}
+
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;    
+}
+
+.Logo span{
+    color: aqua;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-item{
+    position: relative;
+}
+
+.menu-item > a{
+    color: white;
+    text-decoration: none;
+    font-weight: none;
+    transition: 0.3s;
+} 
+
+.menu > a:hover{
+    color: aqua;
+}
+
+.dropdown{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 220px;
+    background-color: #111;
+    border: 1px solid #222;
+    overflow: hidden;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    box-shadow: 0 10px 25px #00000080;
+}
+
+.menu-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown a{
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.dropdown a:hover{
+    background: #00e5ff;
+    color: #000;
+}
+
+.menu-btn{
+    background: #111;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    border: 1px solid #333;
+    transition: all 0.35s ease;
+}
+
+.menu-btn:hover{
+    background: linear-gradient(135deg, aqua,
+    #00bcd4);
+    color: #000 !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px #00e5ff80;
+}
+
+.search-box{
+    position: relative;
+}
+
+.search-box input{
+    width: 260px;
+    padding: 12px 45px 12px 18px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+}
+
+.search-box input::placeholder{
+    color:#aaa
+}
+
+.actions{
+    display: flex;
+    gap: 12px;
+}
+
+.btn{
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.Login{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.Login:hover{
+    background-color: aqua;
+    color: black;
+}
+
+.signup{
+    background: aqua;
+    color: #000;
+}
+
+.signup:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #00e5ff80;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">Logo</div>
+
+    <div class="menu">
+
+        <div class="menu-item">
+            <a href="#">Produtos</a>
+
+            <div class="dropdown">
+                <a href="#">Dashboard</a>
+                <a href="#">Aplicativos</a>
+                <a href="#">Integrações</a>
+                <a href="#">API</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <a href="#">Serviços</a>
+
+            <div class="dropdown">
+                <a href="#">Desenvolvimento</a>
+                <a href="#">Consultoria</a>
+                <a href="#">Hospedagem</a>
+            </div>
+        </div>
+
+        <a href="#" class="menu-btn">
+            <i class="fas fa-circle-info"></i> Sobre
+        </a>
+
+        <a href="#" class="menu-btn">
+            <i class="fas fa-envelope"></i> Contato
+        </a>
+
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar...">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="actions">
+       <button class="btn Login">
+            <i class="fas fa-user"></i> Login
+        </button>
+
+        <button class="btn signup">
+            <i class="fas fa-user-plus"></i> Cadastrar
+        </button>
+    </div>
+
+</nav>
+
+
+
+</body>
+</html>

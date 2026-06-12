@@ -1,0 +1,116 @@
+/* Visual geral para a página */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a24; /* Fundo */
+    color: #c9c9d1; /* Texto  */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Flexbox painel principal */
+.painel {
+    display: flex;
+    flex-direction: column; /* Organiza elementos em coluna */
+    justify-content: center;
+    gap: 35px;              
+    
+    /* Caixa principal do painel */
+    background-color: #2c2b3e; 
+    width: 900px;
+    padding: 35px;
+    border-radius: 8px;
+    
+   
+    margin: 10vh auto; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra da profundidade */
+}
+
+/* Vizual visor principal */
+.visor-principal {
+    position: relative; 
+    background-color: #12121c; 
+    padding: 40px 30px 80px 20px; 
+    border-radius: 5px;
+    text-align: left; 
+}
+
+/* Tirando a margem do título */
+.visor-principal h2 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* Posicionamento doo alerta */
+.indicador-alerta {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: #fc4b4b;
+    color: white;
+    
+    padding: 18px 30px; 
+    font-size: 20px;   
+    
+    border-radius: 3px;
+    font-weight: bold;
+
+}
+
+
+/* Flexbox botões */
+.botoes-container {
+    display: flex;
+    gap: 15px;           
+}
+
+.botoes-container button {
+    flex: 1; /* Os 3 botões dividirem o espaço por igual */
+    padding: 35px;
+    background-color: #4b4a67; 
+    color: #c9c9d1;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.botoes-container button:hover {
+    background-color: #5d5c7a; /* Efeito ao passar o mouse */
+}
+
+/* Visual informações da nave */
+.info-nave {
+    background-color: #12121c; 
+    padding: 35px;
+    border-radius: 5px;
+    text-align: left; 
+    font-size: 25px;
+}
+
+.info-nave p {
+    margin: 10px 0;
+}
+
+/* Posicionamento fixo botão de ajuda */
+.ajuda-flutuante {
+    position: fixed; 
+    bottom: 30px;       /* Colocando na parte de baixo da tela */
+    left: 30px;         
+    background-color: #1877f2;
+    color: white;
+    
+    /* botão redondo:*/
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%; 
+    
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
